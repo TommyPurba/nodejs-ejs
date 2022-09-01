@@ -1,0 +1,13 @@
+<%- include("partials/header") -%>
+
+<h1>HOME</h1>
+        <p><%= StartingContent %></p>
+
+        <% pots.forEach(function(nilai){%>
+        <h1><%= nilai.title %></h1>
+        <p><%= nilai.content.substring(0, 100) + "..." %> <a href="/post/<%= nilai.title %> >">read more</a></p>
+        
+        <%});%>
+
+
+<%- include("partials/footer") -%>
